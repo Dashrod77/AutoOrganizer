@@ -12,3 +12,17 @@ Planteamiento: Una cli en python que
 3. genera un reporte de que se realizo cuantos archivos se acomodaron y cuantos errores hubo
 4. tendra un modo "undo" que revierte los cambios y estos se guardan en un json con historial
 5. funciona exactamente igual para linux como para windows
+
+
+Estructura de archivos
+AUTOORGANIZER/
+|- Readme.md
+|- DESING.md
+|- config.json
+|- .gitignore
+|- main.py
+|- organizer/
+|   |- __init__.py
+|   |- organizer.py
+|   |- history.py
+|   |- cli.py
