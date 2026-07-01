@@ -1,6 +1,7 @@
 # AutoOrganizer
 Tiempo estimado: 6 - 7 hrs
 Autor: Oziel Elias Rodriguez gonzalez
+licencia: MIT
 Lenguaje: python
 plataformas: linux y windows
 
@@ -13,8 +14,41 @@ Planteamiento: Una cli en python que
 4. tendra un modo "undo" que revierte los cambios y estos se guardan en un json con historial
 5. funciona exactamente igual para linux como para windows
 
+Caracteristicas principales
+Escanea una carpeta y organiza los archivos en subcarpetas por su tipo
+Crea un reporte de movimeintos
+Modo undo con historial json
+Funciona en windows y linux
 
-Estructura de archivos
+Requisitos:
+-Python 3.10+
+-pathlib (stdlib)
+-json (stdlib)
+-argparse (stdlib)
+
+Instalacion:
+git clone
+cd AutoOrganizer
+git switch dev
+
+Configuracion:
+En configuracion se encuentra una lista denominada categorias ahi puedes agregar categorias que no esten disponibles
+"mi_categoria": [".ext1", ".ext2"]
+
+Uso:
+Ver archivos sin moverlos
+python main.py --scan --path "folder"
+
+Organizar los archivos
+python main.py --organize --path "folder"
+
+Ver el historial de movimientos
+python main.py --history
+
+Deshacer ultimo movimiento
+python main.py --undo
+
+Estructura de archivos:
 AUTOORGANIZER/
 |- Readme.md
 |- DESING.md
