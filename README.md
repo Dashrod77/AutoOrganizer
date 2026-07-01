@@ -37,10 +37,24 @@ En configuracion se encuentra una lista denominada categorias ahi puedes agregar
 
 Uso:
 Ver archivos sin moverlos
-python main.py --scan --path "folder"
+en carpeta actual
+python main.py --scan
+
+en carpeta especifica (windows)
+python main.py --scan --path "C:/Users/Tu_usuario/Descargas"
+
+en carpeta especifica (linux)
+python main.py --scan --path ~/Descargas
 
 Organizar los archivos
-python main.py --organize --path "folder"
+en carpeta actual
+python main.py --organize
+
+en carpeta especifica (windows)
+python main.py --organize --path "C:/Users/tu_usuario/Descargas"
+
+en carpeta especifica (linux)
+python main.py --organize --path ~/Descargas
 
 Ver el historial de movimientos
 python main.py --history
@@ -60,3 +74,16 @@ AUTOORGANIZER/
 |   |- organizer.py
 |   |- history.py
 |   |- cli.py
+
+Stack tecnologico:
+-Python 3.10+
+-pathlib (cross-plataform paths)
+-json (persistence)
+argparse (CLI)
+
+Troubleshooting:
+- **"python no encontrado"** Usa ´python3.14´ en lugar de ´python´
+- **"config.json no encontrado"** Verifica estar en la raiz del proyecto
+- **"Permiso denegado"** Verifica permisos de la carpeta
+
+
