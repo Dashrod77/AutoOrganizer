@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*.pyc
+*.organizer_history.json
+venv/
+.env
+# ignorar los archivos personales de historial y cache
