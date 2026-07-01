@@ -12,7 +12,7 @@ class FileOrganizer:
       raise FileNotFoundError(f"carpeta no encontrada: {self.source_folder}")
 
   def scan(self):
-    for file in self.source_folder.rglob('*'):
+    for file in self.source_folder.iterdir():
       if not file.is_file():
         continue
       extension = file.suffix.lower()
@@ -22,14 +22,10 @@ class FileOrganizer:
           break
 
   def organize(self, file, categories):
-    for categories, extensions_list in self.categorias["categories"].items():
-      if file.suffix.lower() in extensions_list:
         destination_folder = self.source_folder / categories
         destination_folder.mkdir(exist_ok=True)
         destination_file = destination_folder / file.name
         self.history.log_move(str(file), str(destination_file), categories)
         file.rename(destination_file)
         print(f"Archivo {file.name} movido a {destination_folder}")
-        break
-
-    pass
+  pass
