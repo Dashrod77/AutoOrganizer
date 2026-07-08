@@ -1,0 +1,7 @@
+#Python 3.10+
+#Solo usa stdlib
+
+#pathlib - stdlib
+#json - stdlib
+#argparse - stdlib
+#datetime - stdlib
